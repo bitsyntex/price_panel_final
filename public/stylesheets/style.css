@@ -1,0 +1,57 @@
+body {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(75deg, #709baa 50%, #E4E9FD 50%);
+  /*min-height: 1000px;*/
+  background-size: cover;
+  background-attachment: fixed;
+}
+.box1 {
+  max-width: 800px;
+  margin: 10% auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.item1 {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #F1F1F1;
+}
+.item2 {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #F1F1F1;
+}
+.item3 {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+p {
+  margin: 0;
+  margin-bottom: 0;
+}
+#btc {
+  width: 80%;
+  margin-left: 20px;
+}
+#eth {
+  width: 80%;
+  margin-left: 20px;
+}
+.col-4 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.priceBtc {
+  color: darkorange;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+.priceEth {
+  color: #494949;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
