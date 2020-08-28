@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+const io = require('./util/socket').init(server);
 const prices = require(__dirname + '/prices.js');
 
 console.log(prices);
@@ -23,12 +23,7 @@ io.on('connection', socket => {
 });
 
 setInterval(function () {
-    let cryptoPrices = prices;
-    let priceBidbtc = cryptoPrices[0];
-    let priceAskbtc = cryptoPrices[1];
-    let priceBideth = cryptoPrices[2];
-    let priceAsketh = cryptoPrices[3];
-    io.emit('price update', priceBidbtc, priceAskbtc, priceBideth, priceAsketh);
+    prices.getPrice()
 }, 500);
 
 

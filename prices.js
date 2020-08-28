@@ -10,8 +10,8 @@ module.exports.getPrice = function() {
             let priceAskbtc = Number(dataCrypto.data.BTC.sell).toFixed(2);
             let priceBideth = Number(dataCrypto.data.ETH.buy).toFixed(2);
             let priceAsketh = Number(dataCrypto.data.ETH.sell).toFixed(2);
-
-            return {priceBidbtc, priceAskbtc, priceBideth, priceAsketh};
+            const io = require('./util/socket').getIO();
+            io.emit('price-update', priceBidbtc, priceAskbtc, priceBideth, priceAsketh);
         });
     });
 }
