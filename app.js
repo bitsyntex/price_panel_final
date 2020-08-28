@@ -5,7 +5,7 @@ const server = require('http').createServer(app);
 const io = require('./util/socket').init(server);
 const prices = require(__dirname + '/prices.js');
 
-console.log(prices);
+console.log(prices.getPrice());
 
 
 app.set('view engine', 'ejs');
@@ -31,12 +31,3 @@ server.listen(process.env.PORT || 3000, () => {
     console.log("Server started on port 3000.");
 });
 
-
-// setInterval(function () {
-//     let cryptoPrices = prices();
-//     let priceBidbtc = cryptoPrices.bidBtc();
-//     let priceAskbtc = cryptoPrices.askBtc();
-//     let priceBideth = cryptoPrices.bidEth();
-//     let priceAsketh = cryptoPrices.askEth();
-//     io.emit('price update', priceBidbtc, priceAskbtc, priceBideth, priceAsketh);
-// }, 500);

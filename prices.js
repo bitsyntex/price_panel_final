@@ -1,6 +1,5 @@
 const https = require("https");
 
-
 module.exports.getPrice = function() {
     const url = "https://panel.cashbroker.com/Themes/Controls/ExchangeRatesForCashBroker.ashx?SkipBgnAndCross=0";
     https.get(url, function (response) {
