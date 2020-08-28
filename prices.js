@@ -14,8 +14,3 @@ module.exports.getPrice = function() {
         });
     });
 }
-
-
-// return {bidBtc: priceBidbtc(), askBtc: priceAskbtc(), bidEth: priceBideth(), askEth: priceAsketh()};
-//
-// return [priceBidbtc(), priceAskbtc(), priceBideth(), priceAsketh()];

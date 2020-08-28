@@ -5,9 +5,6 @@ const server = require('http').createServer(app);
 const io = require('./util/socket').init(server);
 const prices = require(__dirname + '/prices.js');
 
-console.log(prices.getPrice());
-
-
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(express.json());
