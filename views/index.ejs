@@ -12,9 +12,7 @@
     <script>
         $(document).ready(function () {
             let socket = io.connect();
-            console.log('test skryptu')
             socket.on('price-update', function (priceBidbtc, priceAskbtc, priceBideth, priceAsketh) {
-                console.log('test socketa')
                 $('#btc-bid').html(`${priceBidbtc}`)
                 $('#btc-ask').html(`${priceAskbtc}`)
                 $('#eth-bid').html(`${priceBideth}`)

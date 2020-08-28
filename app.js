@@ -20,7 +20,7 @@ io.on('connection', socket => {
 });
 
 setInterval(function () {
-    prices.getPrice()
+    prices.getPrice();
 }, 500);
 
 
