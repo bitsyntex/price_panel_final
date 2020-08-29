@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
 const server = require('http').createServer(app);
-const io = require('./util/socket').socketsDeploy(server);
+const io = require('./util/socket').socketDeploy(server);
 const prices = require(__dirname + '/prices.js');
 
 app.set('view engine', 'ejs');
