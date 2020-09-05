@@ -24,7 +24,7 @@ setInterval(function () {
 }, 500);
 
 
-server.listen(process.env.PORT || 80, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log("Server started on port 3000.");
 });
 
